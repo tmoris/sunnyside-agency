@@ -16,6 +16,7 @@ html {
 --clr-darkdesaturated__cyan: hsl(167, 40%, 24%); /* (graphic design text) */
 --clr-darkblue: hsl(198, 62%, 26%); /* (photography text) */
 --clr-darkmoderate__cyan : hsl(168, 34%, 41%); /* (footer) */
+--clr-skyblue: hsl(197, 71%, 73%);
 
 
 
@@ -102,6 +103,15 @@ inline-size: 80%;
 max-inline-size: 80rem;
 margin-inline: auto;
 }
+
+.header {
+background-color: hsl(197, 71%, 73%);
+ background-image: url(/images/desktop/image-header.jpg); 
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+}
+
 
 
 
