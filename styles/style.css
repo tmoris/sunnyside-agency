@@ -178,12 +178,12 @@ outline-style: dotted;
 }
 
 .nav {
-display: block;
+display: none;
 background-color: var(--clr-white);
 color: var(--clr-darkgrayish-blue);
 margin-block-start: 2em;
 transform: translateX(100vw);
-transform: translateX(0);
+/* transform: translateX(0); */
 text-align: center;
 position: relative;
 }
@@ -237,7 +237,32 @@ box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);;
 }
 
 .hero {
-/* margin-block-start: 2em; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ margin-block-start: 4em; 
+color: var(--clr-white);
+
+}
+
+.hero__title {
+line-height: 1.1;
+text-transform: uppercase;
+text-align: center;
+font-size: 2rem;
+margin-block-end: 4em;
+}
+
+.hero__img {
+position: relative;
+bottom: 6.5em;
+}
+.about {
+  background-color: hsl(7, 100%, 99%);
+}
+.about-text {
+display: flex;
 }
 .attribution {
   font-size: 11px;
