@@ -263,6 +263,10 @@ bottom: 6.5em;
 }
 .about-text {
 display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
 }
 .attribution {
   font-size: 11px;
