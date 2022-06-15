@@ -335,6 +335,7 @@ text-transform: uppercase;
 .name {
 margin: 0;
 }
+
 .name {
   font-size: 1.25rem;
 }
@@ -342,10 +343,18 @@ margin: 0;
   text-transform: capitalize;
   font-size: 1rem;
   }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+/* .gallery:last-child {
+
+} */
 .attribution {
   font-size: 11px;
   text-align: center;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
