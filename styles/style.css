@@ -352,14 +352,7 @@ margin: 0;
 
 @media (min-width: 900px) {
 
-.container {
-display: grid;
-grid-template-columns: 1fr;
-grid-template-rows: repeat(3, auto);
-grid-template-areas: 'header'
-'main'
-'footer';
-}
+
 
   
 }
