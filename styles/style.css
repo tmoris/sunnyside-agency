@@ -377,18 +377,14 @@ ol {
   }
 
   .about-text {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    text-align: start;
     padding: 0;
   }
   .about-text:first-child {
+    display: flex;
     flex-direction: row-reverse;
-  }
-  .about-text {
-    flex-direction: row;
-  }
-
-  .about-text >* {
-   flex-basis: 100%;
   }
 
   .testimonial> *+* {
