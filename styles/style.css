@@ -251,6 +251,8 @@ ol {
 }
 
 .hero__img {
+  margin-block-start: 2em;
+  display: inline-block;
   position: relative;
   bottom: 8em;
 }
@@ -409,6 +411,7 @@ ol {
 .navlist__link {
   color: var(--clr-white);
 }
+
 .about-text-section-text {
   padding: 0;
 }
