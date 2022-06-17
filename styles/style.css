@@ -364,6 +364,26 @@ transform: translateX(0);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
+
+.footer {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background-color: var(--clr-darkmoderate__cyan);
+padding: 2em;
+}
+
+.footer-list__primary, .footer-list__secondary {
+display: flex;
+}
+
+.footer-list__primary >*+* {
+margin-inline-end: 1em;
+}
+
+
+
 .attribution {
   font-size: 11px;
   text-align: center;
