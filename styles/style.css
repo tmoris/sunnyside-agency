@@ -378,9 +378,6 @@ padding: 2em;
 display: flex;
 }
 
-.footer-list__primary >*+* {
-margin-inline-end: 1em;
-}
 
 
 
