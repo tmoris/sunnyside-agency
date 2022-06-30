@@ -113,7 +113,7 @@ ol {
 }
 
 .container {
-  inline-size: 80%;
+  inline-size: 90%;
   max-inline-size: 80rem;
   margin-inline: auto;
 }
@@ -187,6 +187,7 @@ transform: rotate(0.635turn);
 .open .hambuger::after {
 opacity: 0;
 }
+
 .nav {
   display: none;
   background-color: var(--clr-white);
@@ -201,6 +202,7 @@ opacity: 0;
   display: block;
 transform: translateX(0); 
 }
+
 .nav::before {
   display: inline-block;
   content: "";
@@ -214,9 +216,11 @@ transform: translateX(0);
   top: -1em;
   z-index: 1000;
 }
+
 .navlist {
   padding-block: 2em;
 }
+
 .navlist__item + .navlist__item {
   padding-block-start: 1em;
 }
