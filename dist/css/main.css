@@ -86,8 +86,8 @@ img {
 }
 
 :focus {
-  outline: 0.055em solid inherit;
-  outline-offset: 0.0635em;
+  outline: 0.0625em solid inherit;
+  outline-offset: 0.0625em;
   outline-style: dotted;
 }
 
@@ -152,4 +152,15 @@ h5 {
 small,
 .small-text {
   font-size: 0.8rem;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-areas: "header header" "main main" "footer footer";
+}
+
+.container {
+  inline-size: 90%;
+  max-inline-size: 80rem;
+  margin-inline: auto;
 }/*# sourceMappingURL=main.css.map */

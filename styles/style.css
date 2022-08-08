@@ -1,31 +1,5 @@
 
 
-
-img {
-  display: block;
-  block-size: auto;
-  max-inline-size: 100%;
-  object-fit: cover;
-}
-
-a,
-a:hover,
-a:active {
-  text-decoration: none;
-}
-
-ul,
-ol {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-:focus {
-  outline: 1px solid inherit;
-  outline-style: dotted;
-}
-
 .container {
   inline-size: 90%;
   max-inline-size: 80rem;

@@ -1,0 +1,12 @@
+.wrapper {
+display: grid;
+grid-template-areas: "header header"
+"main main"
+"footer footer";
+}
+
+.container {
+  inline-size: 90%;
+  max-inline-size: 80rem;
+  margin-inline: auto;
+}
