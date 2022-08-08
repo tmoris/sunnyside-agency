@@ -3,3 +3,27 @@ $font-weights:(
 "reg": 400,
 "bold": 700,
 );
+
+$breakpoints: (
+"small": 20em ,
+"medium": 37.5em,
+"large": 64rem
+);
+
+@mixin small-screen {
+  @media (min-width: map-get($breakpoints, "small")) {
+    @content;
+  }
+}
+
+@mixin medium-screen {
+  @media (min-width: map-get($breakpoints, "medium")) {
+    @content;
+  }
+}
+
+@mixin large-screen {
+  @media (min-width: map-get($breakpoints, "large")) {
+    @content;
+  }
+}
