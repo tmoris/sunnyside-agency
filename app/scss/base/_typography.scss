@@ -1,0 +1,52 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixin" as mixin;
+
+body {
+  background-color: var.$clr-white;
+  color: var.$clr-verydarkdesaturated-blue;
+  font-family: var.$body-font-barlow;
+  font-weight: map-get(mixin.$font-weights,  reg);
+  list-style: 0.65;
+}
+
+p {
+  margin-block-end: var.$block-space;
+  max-inline-size: clamp(45ch, 50%, 75ch);
+  &:first-child {
+    text-transform: uppercase;
+  }
+}
+
+h1, h2, h3, h4, h5,h6 {
+  margin: 0;
+  margin-block-end: var.$block-space;
+  font-family: var.$heading-font-fraunces;
+  font-weight: map-get(mixin.$font-weights , reg);
+  line-height: 1.3;
+}
+
+h1 {
+  margin-block-start: 0;
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.125rem;
+}
+
+small,
+.small-text {
+  font-size: 0.8rem;
+}

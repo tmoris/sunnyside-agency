@@ -59,3 +59,16 @@ img {
   font-family: inherit;
   font-size: 0.75em;
 }
+:focus {
+	outline: 0.055em solid inherit;
+	outline-offset: 0.0635em;
+	outline-style: dotted;
+}
+html {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	font-size: 112.5%; /* 18px  */
+}
+*, *::before, *::after {
+	box-sizing: inherit;
+}
