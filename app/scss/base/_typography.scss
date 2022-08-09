@@ -5,8 +5,8 @@ body {
   background-color: var.$clr-white;
   color: var.$clr-verydarkdesaturated-blue;
   font-family: var.$body-font-barlow;
-  font-weight: map-get(mixin.$font-weights,  reg);
-  list-style: 0.75;
+  font-weight: map-get(mixin.$font-weights,  light);
+  line-height: 1.65;
 }
 
 p {

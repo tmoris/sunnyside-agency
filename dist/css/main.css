@@ -105,8 +105,8 @@ body {
   background-color: hsl(0deg, 0%, 100%);
   color: hsl(212deg, 27%, 19%);
   font-family: "Barlow", sans-serif;
-  font-weight: 400;
-  list-style: 0.75;
+  font-weight: 300;
+  line-height: 1.65;
 }
 
 p {
@@ -157,6 +157,11 @@ small,
 .wrapper {
   display: grid;
   grid-template-areas: "header header" "main main" "footer footer";
+}
+@media (min-width: 20em) {
+  .wrapper {
+    grid-template-areas: "header" "main" "footer";
+  }
 }
 
 .container {
@@ -296,6 +301,82 @@ small,
 
 .main {
   grid-area: main;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: hsl(0deg, 0%, 100%);
+  -webkit-margin-after: 1rem;
+          margin-block-end: 1rem;
+}
+.services-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.services-item__img-desktop {
+  display: none;
+}
+.services-item__text {
+  padding: 1.125rem;
+  text-align: center;
+}
+.services-item__text--title {
+  font-size: 2em;
+  line-height: 1.1;
+}
+.services-item__text--link {
+  text-transform: uppercase;
+  font-family: "Fraunces", serif;
+  color: inherit;
+}
+
+.sercives-item__graphic-design, .sercives-item__photography {
+  position: relative;
+}
+
+.services-item__text--graphic-design, .sercives-item__text--photography {
+  position: absolute;
+  bottom: 2em;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+  -webkit-margin-after: 1rem;
+          margin-block-end: 1rem;
+}
+.testimonial-samples__sample + .testimonial-samples__sample {
+  -webkit-margin-before: 2.25rem;
+          margin-block-start: 2.25rem;
+}
+.testimonial img {
+  inline-size: 5rem;
+  border-radius: 100vw;
+  margin-inline: auto;
+}
+.testimonial-title, .testimonial-subtitle {
+  color: rgba(35, 48, 62, 0.4);
+}
+.testimonial-title {
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+.testimonial-subtitle {
+  margin: 0;
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+.testimonial .name {
+  font-size: 1.25rem;
+  margin: 0;
 }
 
 .footer {
