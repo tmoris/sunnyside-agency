@@ -392,7 +392,6 @@ small,
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
 .services-item__img-desktop {
   display: none;

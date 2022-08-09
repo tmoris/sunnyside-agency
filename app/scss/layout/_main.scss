@@ -9,13 +9,14 @@ grid-area: main;
   grid-template-columns: 1fr;
   background-color: var.$clr-white;
   margin-block-end: var.$block-space;
-
+  
   &-item {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      position: relative;
+
+ 
   
       &__img-desktop {
         display: none;
