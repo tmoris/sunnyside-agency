@@ -1,3 +1,30 @@
+@use "../abstracts/variables" as var;
 .footer {
 grid-area: footer;
+background-color: var.$clr-darkmoderate__cyan;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding-block: calc(var.$gutter-space*2);
+}
+.footer .navlist {
+display: flex;
+flex-direction: column;
+gap: var.$block-space;
+}
+.navlist-link {
+  text-transform: capitalize;
+  color: var.$clr-verydarkgrayish-blue;
+  cursor: pointer;
+  transition: 250ms cubic-bezier(0.47, 0, 0.745, 0.715);
+  text-decoration: none;
+  padding: 0.25em 0.75em;
+}
+.footer-list__secondary {
+  flex-direction: row;
+}
+.footer-list__secondary .navlist-link {
+  padding: 0;
+  color: inherit;
 }
