@@ -5,14 +5,14 @@
   grid-area: header;
   background-color: hsl(197, 71%, 73%);
   color: var.$clr-white;
-  background-image: url("/images/mobile/image-header.jpg");
+  background-image: url("./images/mobile/image-header.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   padding-block: 2em;
 
   @include mixin.medium-screen {
-    background-image: url("/images/desktop/image-header.jpg");
+    background-image: url("./images/desktop/image-header.jpg");
     padding-block-start: 0;
   }
 }
