@@ -1,22 +1,24 @@
+$clr-softred: hsl(7, 99%, 70%);
+$clr-yellow: hsl(51, 100%, 49%);
+$clr-darkdesaturated__cyan: hsl(167, 40%, 24%);
+/* (graphic design text) */
+$clr-darkblue: hsl(198, 62%, 26%);
+/* (photography text) */
+$clr-darkmoderate__cyan: hsl(168, 34%, 41%);
+/* (footer) */
+$clr-skyblue: hsl(197, 71%, 73%);
 
-  $clr-softred: hsl(7, 99%, 70%);
-  $clr-yellow: hsl(51, 100%, 49%);
-  $clr-darkdesaturated__cyan: hsl(167, 40%, 24%); /* (graphic design text) */
-  $clr-darkblue: hsl(198, 62%, 26%); /* (photography text) */
-  $clr-darkmoderate__cyan: hsl(168, 34%, 41%); /* (footer) */
-  $clr-skyblue: hsl(197, 71%, 73%);
+/* ### Neutral */
 
-  /* ### Neutral */
+$clr-verydarkdesaturated-blue: hsl(212, 27%, 19%);
+$clr-verydarkgrayish-blue: hsl(213, 9%, 39%);
+$clr-darkgrayish-blue: hsl(232, 10%, 55%);
+$clr-grayish-blue: hsl(210, 4%, 67%);
+$clr-white: hsl(0, 0%, 100%);
 
-  $clr-verydarkdesaturated-blue: hsl(212, 27%, 19%);
-  $clr-verydarkgrayish-blue: hsl(213, 9%, 39%);
-  $clr-darkgrayish-blue: hsl(232, 10%, 55%);
-  $clr-grayish-blue: hsl(210, 4%, 67%);
-  $clr-white: hsl(0, 0%, 100%);
-
-  /* font */
-  $body-font-barlow: "Barlow", sans-serif;
-  $heading-font-fraunces: "Fraunces", serif;
+/* font */
+$body-font-barlow: "Barlow", sans-serif;
+$heading-font-fraunces: "Fraunces", serif;
 
 /*Spacing*/
 $block-space: 1rem;

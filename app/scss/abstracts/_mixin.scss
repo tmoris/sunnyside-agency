@@ -1,13 +1,13 @@
-$font-weights:(
+$font-weights: (
   "light": 300,
-"reg": 400,
-"bold": 700,
+  "reg": 400,
+  "bold": 700,
 );
 
 $breakpoints: (
-"small": 20em ,
-"medium": 37.5em,
-"large": 64rem
+  "small": 20em,
+  "medium": 37.5em,
+  "large": 64rem
 );
 
 @mixin small-screen {

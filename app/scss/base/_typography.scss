@@ -5,19 +5,25 @@ body {
   background-color: var.$clr-white;
   color: var.$clr-verydarkdesaturated-blue;
   font-family: var.$body-font-barlow;
-  font-weight: map-get(mixin.$font-weights,  light);
+  font-weight: map-get(mixin.$font-weights, light);
   line-height: 1.65;
 }
 
 p {
   margin-block-end: var.$block-space;
   max-inline-size: clamp(45ch, 60ch, 75ch);
+
   &:first-child {
     text-transform: uppercase;
   }
 }
 
-h1, h2, h3, h4, h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   margin-block-end: var.$block-space;
   font-family: var.$heading-font-fraunces;

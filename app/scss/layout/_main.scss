@@ -64,28 +64,28 @@
         display: block;
       }
     }
- 
 
-  &__text {
-    padding: calc(var.$gutter-space*2);
-    text-align: center;
 
-    @include mixin.medium-screen {
-      padding: 0;
-    }
+    &__text {
+      padding: calc(var.$gutter-space*2);
+      text-align: center;
 
-    &--title {
-      font-size: 2em;
-      line-height: 1.1;
-    }
+      @include mixin.medium-screen {
+        padding: 0;
+      }
 
-    &--link {
-      text-transform: uppercase;
-      font-family: var.$heading-font-fraunces;
-      color: inherit;
+      &--title {
+        font-size: 2em;
+        line-height: 1.1;
+      }
+
+      &--link {
+        text-transform: uppercase;
+        font-family: var.$heading-font-fraunces;
+        color: inherit;
+      }
     }
   }
-}
 }
 
 .services-item__graphic-design,
@@ -119,6 +119,7 @@
 
   &-samples {
     grid-area: testimonial;
+
     @include mixin.medium-screen {
       display: flex;
     }

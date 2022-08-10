@@ -1,14 +1,16 @@
 @use "../abstracts/mixin" as mixin;
+
 .wrapper {
-display: grid;
-grid-template-areas: "header header"
-"main main"
-"footer footer";
-@include mixin.small-screen {
-  grid-template-areas: "header"
-  "main"
-  "footer";
-}
+  display: grid;
+  grid-template-areas: "header header"
+    "main main"
+    "footer footer";
+
+  @include mixin.small-screen {
+    grid-template-areas: "header"
+      "main"
+      "footer";
+  }
 }
 
 .container {
