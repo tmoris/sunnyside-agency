@@ -174,7 +174,7 @@ small,
   grid-area: header;
   background-color: hsl(197deg, 71%, 73%);
   color: hsl(0deg, 0%, 100%);
-  background-image: url("./images/mobile/image-header.jpg");
+  background-image: url("../images/mobile/image-header.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -182,7 +182,7 @@ small,
 }
 @media (min-width: 37.5em) {
   .header {
-    background-image: url("./images/desktop/image-header.jpg");
+    background-image: url("../images/desktop/image-header.jpg");
     -webkit-padding-before: 0;
             padding-block-start: 0;
   }
