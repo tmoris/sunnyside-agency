@@ -246,6 +246,7 @@ small,
   block-size: 3px;
   cursor: pointer;
   border-radius: 0.25em;
+  transition: transform 150ms cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 .hamburger::before, .hamburger::after {
   content: "";
@@ -258,6 +259,23 @@ small,
 }
 .hamburger::after {
   bottom: 6px;
+}
+
+.open .nav {
+  transform: translateX(0);
+  display: block;
+}
+
+.open .hamburger {
+  transform: rotate(0.624turn);
+}
+
+.open .hamburger::before {
+  transform: rotate(90deg) translateX(-6px);
+}
+
+.open .hamburger::after {
+  opacity: 0;
 }
 
 /*brand section styles end */
