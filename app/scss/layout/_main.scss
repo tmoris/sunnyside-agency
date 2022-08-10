@@ -130,7 +130,7 @@
 
     @include mixin.medium-screen {
       margin-block-start: 0;
-      margin-inline-start: calc(var.$gutter-space*2);
+      margin-inline-start: calc(var.$gutter-space);
     }
 
   }

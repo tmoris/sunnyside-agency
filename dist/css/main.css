@@ -606,8 +606,8 @@ small,
   .testimonial-samples__sample + .testimonial-samples__sample {
     -webkit-margin-before: 0;
             margin-block-start: 0;
-    -webkit-margin-start: 2.25rem;
-            margin-inline-start: 2.25rem;
+    -webkit-margin-start: 1.125rem;
+            margin-inline-start: 1.125rem;
   }
 }
 .testimonial img {
