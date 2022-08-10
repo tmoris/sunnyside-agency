@@ -378,19 +378,49 @@ small,
 
 .main {
   grid-area: main;
-}
-@media (min-width: 37.5em) {
-  .main {
-    display: grid;
-    grid-template-areas: " services services" "testimonial testimonial" " gallery gallery";
-  }
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .services {
-  grid-area: services;
   background-color: hsl(0deg, 0%, 100%);
   -webkit-margin-after: 1rem;
           margin-block-end: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 37.5em) {
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: " transform transform" "stand-out stand-out" "graphics photography";
+  }
+}
+.services-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 37.5em) {
+  .services-item {
+    flex-direction: row;
+  }
+  .services-item > * {
+    flex-basis: 100%;
+  }
+  .services-item__graphic-design {
+    grid-area: graphics;
+  }
+  .services-item__photography {
+    grid-area: photography;
+  }
+  .services-item__stand-out {
+    grid-area: stand-out;
+  }
+  .services-item__transform {
+    grid-area: transform;
+    flex-direction: row-reverse;
+  }
 }
 @media (min-width: 37.5em) {
   .services-item__img-mobile {
@@ -406,8 +436,13 @@ small,
   }
 }
 .services-item__text {
-  padding: 1.125rem;
+  padding: 2.25rem;
   text-align: center;
+}
+@media (min-width: 37.5em) {
+  .services-item__text {
+    padding: 0;
+  }
 }
 .services-item__text--title {
   font-size: 2em;
@@ -419,41 +454,18 @@ small,
   color: inherit;
 }
 
-@media (min-width: 37.5em) {
-  .services {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: " sercives-item__transform sercives-item__transform" "sercives-item__stand-out sercives-item__stand-out" " sercives-item__graphic-design sercives-item__photography";
-  }
-}
-
-.sercives-item__transform {
-  grid-area: sercives-item__transform;
-}
-
-.sercives-item__stand-out {
-  grid-area: sercives-item__stand-out;
-}
-
-.sercives-item__graphic-design {
-  grid-area: sercives-item__graphic-design;
-}
-
-.sercives-item__photography {
-  grid-area: sercives-item__photography;
-}
-
-.sercives-item__graphic-design, .sercives-item__photography {
+.services-item__graphic-design,
+.services-item__photography {
   position: relative;
 }
 
-.services-item__text--graphic-design, .sercives-item__text--photography {
+.services-item__text--graphic-design,
+.sercives-item__text--photography {
   position: absolute;
-  bottom: 2em;
+  bottom: 1rem;
 }
 
 .testimonial {
-  grid-area: testimonial;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -513,7 +525,6 @@ small,
 }
 
 .gallery {
-  grid-area: gallery;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
 }

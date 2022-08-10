@@ -1,83 +1,106 @@
-@use  "../abstracts/variables" as var;
+@use "../abstracts/variables" as var;
 @use "../abstracts/mixin" as mixin;
+
 .main {
-grid-area: main;
-  @include mixin.medium-screen {
-    display: grid;
-    grid-template-areas: " services services"
-    "testimonial testimonial"
-    " gallery gallery"
-    ;
-  }
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .services {
-  grid-area: services;
   background-color: var.$clr-white;
   margin-block-end: var.$block-space;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include mixin.medium-screen {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: " transform transform"
+      "stand-out stand-out"
+      "graphics photography";
+  }
 
   &-item {
-      
- 
-   &__img-mobile {
-    @include mixin.medium-screen {
-      display: none;
-    }
-   }
-      &__img-desktop {
-        display: none;
-        @include mixin.medium-screen {
-          display: block;
-        }
-      }
-      &__text {
-        padding: var.$gutter-space;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-  &--title {
-    font-size: 2em;
-    line-height: 1.1;
-  }
-  &--link {
-text-transform: uppercase;
-font-family: var.$heading-font-fraunces;
-color: inherit;
-  }
+    @include mixin.medium-screen {
+      flex-direction: row;
+
+      &>* {
+        flex-basis: 100%;
       }
+
+      &__graphic-design {
+        grid-area: graphics;
+      }
+
+      &__photography {
+        grid-area: photography;
+      }
+
+      &__stand-out {
+        grid-area: stand-out;
+      }
+
+      &__transform {
+        grid-area: transform;
+        flex-direction: row-reverse;
+      }
+    }
+
+    &__img-mobile {
+      @include mixin.medium-screen {
+        display: none;
+      }
+    }
+
+    &__img-desktop {
+      display: none;
+
+      @include mixin.medium-screen {
+        display: block;
+      }
+    }
+ 
+
+  &__text {
+    padding: calc(var.$gutter-space*2);
+    text-align: center;
+
+    @include mixin.medium-screen {
+      padding: 0;
+    }
+
+    &--title {
+      font-size: 2em;
+      line-height: 1.1;
+    }
+
+    &--link {
+      text-transform: uppercase;
+      font-family: var.$heading-font-fraunces;
+      color: inherit;
+    }
   }
 }
-.services {
-  @include mixin.medium-screen {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: " sercives-item__transform sercives-item__transform"
-    "sercives-item__stand-out sercives-item__stand-out"
-    " sercives-item__graphic-design sercives-item__photography"
-    ;
-  }
 }
-.sercives-item__transform {
-  grid-area: sercives-item__transform;
-}
-.sercives-item__stand-out {
-  grid-area: sercives-item__stand-out;
-}
-.sercives-item__graphic-design {
-  grid-area: sercives-item__graphic-design;
-}
-.sercives-item__photography {
-  grid-area: sercives-item__photography;
-}
-.sercives-item__graphic-design, .sercives-item__photography {
+
+.services-item__graphic-design,
+.services-item__photography {
   position: relative;
-  
-  }
-  .services-item__text--graphic-design, .sercives-item__text--photography {
-    position: absolute;
-    bottom: 2em;
-  }
+}
+
+.services-item__text--graphic-design,
+.sercives-item__text--photography {
+  position: absolute;
+  bottom: var.$block-space;
+}
+
+
 .testimonial {
-  grid-area: testimonial;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -85,27 +108,30 @@ color: inherit;
   padding: var.$block-space var.$gutter-space;
   text-align: center;
   color: var.$clr-verydarkgrayish-blue;
+
   @include mixin.medium-screen {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-grid-template-areas: "title title title"
-"testimonial testimonial testimonial";
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "title title title"
+      "testimonial testimonial testimonial";
 
   }
-  
- &-samples{
-  grid-area: testimonial;
-  @include mixin.medium-screen {
-    display: flex;
+
+  &-samples {
+    grid-area: testimonial;
+    @include mixin.medium-screen {
+      display: flex;
+    }
   }
- }
-  &-samples__sample + &-samples__sample {
-  margin-block-start: calc(var.$gutter-space*2);
-  @include mixin.medium-screen {
-    margin-block-start: 0;
-    margin-inline-start: calc(var.$gutter-space*2);
-      }
-  
+
+  &-samples__sample+&-samples__sample {
+    margin-block-start: calc(var.$gutter-space*2);
+
+    @include mixin.medium-screen {
+      margin-block-start: 0;
+      margin-inline-start: calc(var.$gutter-space*2);
+    }
+
   }
 
 
@@ -113,34 +139,36 @@ grid-template-areas: "title title title"
     inline-size: 5rem;
     border-radius: 100vw;
     margin-inline: auto;
-  } 
-
-  &-title, &-subtitle {
-color: transparentize($color: var.$clr-verydarkdesaturated-blue, $amount: 0.6);
   }
+
+  &-title,
+  &-subtitle {
+    color: transparentize($color: var.$clr-verydarkdesaturated-blue, $amount: 0.6);
+  }
+
   &-title {
     font-size: 1.5em;
     text-transform: uppercase;
     grid-area: title;
   }
-  &-subtitle {
-  margin: 0;
-  text-transform: capitalize;
-  font-size: 1rem;
-}
 
-& .name {
-  font-size: 1.25rem;
-  margin: 0;
-}
+  &-subtitle {
+    margin: 0;
+    text-transform: capitalize;
+    font-size: 1rem;
+  }
+
+  & .name {
+    font-size: 1.25rem;
+    margin: 0;
+  }
 }
 
 .gallery {
-  grid-area: gallery;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
-  
+
   @include mixin.large-screen {
-grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
