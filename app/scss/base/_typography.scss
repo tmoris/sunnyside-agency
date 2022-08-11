@@ -11,7 +11,9 @@ body {
 
 p {
   margin-block-end: var.$block-space;
-  max-inline-size: clamp(45ch, 60ch, 75ch);
+  max-inline-size: clamp(45ch, 50%, 75ch);
+  
+
 
   &:first-child {
     text-transform: uppercase;
