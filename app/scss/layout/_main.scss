@@ -13,58 +13,15 @@
   display: grid;
   grid-template-columns: 1fr;
 
-  @include mixin.medium-screen {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: " transform transform"
-      "stand-out stand-out"
-      "graphics photography";
-  }
-
   &-item {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    @include mixin.medium-screen {
-      flex-direction: row;
-      
-
-      &>* {
-        flex-basis: 100%;
-      }
-
-      &__graphic-design {
-        grid-area: graphics;
-      }
-
-      &__photography {
-        grid-area: photography;
-      }
-
-      &__stand-out {
-        grid-area: stand-out;
-      }
-
-      &__transform {
-        grid-area: transform;
-        flex-direction: row-reverse;
-        
-      }
-    }
-
-    &__img-mobile {
-      @include mixin.medium-screen {
-        display: none;
-      }
-    }
-
     &__img-desktop {
       display: none;
 
-      @include mixin.medium-screen {
-        display: block;
-      }
     }
 
 
@@ -87,9 +44,10 @@
         position: relative;
         margin-block: var.$gutter-space;
         z-index: 1;
-        
 
-        &-transform::after, &-standout::after {
+
+        &-transform::after,
+        &-standout::after {
           content: '';
           width: 8em;
           height: 0.45em;
@@ -99,24 +57,28 @@
           z-index: -1;
           border-radius: 100vw;
         }
+
         &-transform::after {
           background-color: transparentize($color: var.$clr-yellow, $amount: 0.7);
         }
+
         &-standout::after {
           background-color: transparentize($color: var.$clr-softred, $amount: 0.7);
-        } 
+        }
+
         &-transform {
           &:hover::after {
             background-color: var.$clr-yellow;
-          } 
+          }
         }
+
         &-standout {
           &:hover::after {
             background-color: var.$clr-softred;
-          } 
+          }
         }
-        
-      } 
+
+      }
 
     }
   }
@@ -143,29 +105,12 @@
   text-align: center;
   color: var.$clr-verydarkgrayish-blue;
 
-  @include mixin.medium-screen {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "title title title"
-      "testimonial testimonial testimonial";
-
-  }
-
   &-samples {
     grid-area: testimonial;
-
-    @include mixin.medium-screen {
-      display: flex;
-    }
   }
 
   &-samples__sample+&-samples__sample {
     margin-block-start: calc(var.$gutter-space*2);
-
-    @include mixin.medium-screen {
-      margin-block-start: 0;
-      margin-inline-start: calc(var.$gutter-space);
-    }
 
   }
 
@@ -203,8 +148,4 @@
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
-
-  @include mixin.large-screen {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }

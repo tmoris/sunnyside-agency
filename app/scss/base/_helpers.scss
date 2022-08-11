@@ -6,11 +6,6 @@
     "main main"
     "footer footer";
 
-  @include mixin.small-screen {
-    grid-template-areas: "header"
-      "main"
-      "footer";
-  }
 }
 
 .container {

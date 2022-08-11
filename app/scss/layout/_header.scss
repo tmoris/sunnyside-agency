@@ -10,21 +10,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   padding-block: 2em;
-
-  @include mixin.medium-screen {
-    background-image: url("../images/desktop/image-header.jpg");
-    padding-block-start: 0;
-  }
-}
-
-.navigation {
-  @include mixin.medium-screen {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 5%;
-    padding-block: 2em;
-  }
 }
 
 /* brand section styles start */
@@ -35,10 +20,7 @@
   align-items: center;
   position: relative;
   margin-block-end: var.$block-space;
-
-  @include mixin.medium-screen {
-    margin-block-end: 0;
-  }
+  z-index: 1000;
 
   &__logo {
     max-inline-size: 100%;
@@ -55,13 +37,7 @@
     right: 0;
     cursor: pointer;
     transition: 250ms cubic-bezier(0.47, 0, 0.745, 0.715);
-
-    @include mixin.medium-screen {
-      display: none;
-    }
   }
-
-  z-index: 1000;
 }
 
 .hamburger {
@@ -81,7 +57,7 @@
 
   &::before,
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     right: 0;
@@ -125,16 +101,8 @@
   position: relative;
   transition: transform 250ms cubic-bezier(0.47, 0, 0.745, 0.715);
 
-  @include mixin.medium-screen {
-    display: block;
-    transform: translateX(0);
-    position: static;
-    background-color: inherit;
-    color: inherit;
-  }
-
   &::before {
-    content: '';
+    content: "";
     display: inline-block;
     inline-size: 0;
     block-size: 0;
@@ -145,22 +113,12 @@
     top: -1em;
     right: 0;
     z-index: 1000;
-
-    @include mixin.medium-screen {
-      display: none;
-    }
   }
 }
 
 .navlist {
   padding-block: 2em;
 
-  @include mixin.medium-screen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-block: 0;
-  }
   &__item {
     &:last-child a {
       background-color: var.$clr-yellow;
@@ -168,32 +126,17 @@
       padding: 0.35em 1em;
       color: var.$clr-verydarkdesaturated-blue;
       text-transform: uppercase;
+
       &:hover {
         background-color: transparentize($color: var.$clr-yellow, $amount: 0.6);
         color: var.$clr-white;
         opacity: 1;
       }
-      @include mixin.medium-screen {
-        background-color: var.$clr-white;
-        color: var.$clr-verydarkdesaturated-blue;
-        &:hover {
-          background-color: transparentize($color: var.$clr-white, $amount: 0.6);
-          color: var.$clr-white;
-          opacity: 1;
-        }
-      }
     }
-   
   }
 
-  &__item + &__item {
+  &__item+&__item {
     margin-block-start: var.$block-space;
-
-    @include mixin.medium-screen {
-      margin-block-start: 0;
-      margin-inline-start: var.$block-space;
-    }
-    
   }
 
   &__link {
@@ -203,12 +146,6 @@
     transition: 250ms cubic-bezier(0.47, 0, 0.745, 0.715);
     text-decoration: none;
     padding: 0.25em 0.75em;
-
-    
-
-    @include mixin.medium-screen {
-      color: var.$clr-white;
-    }
 
     &:hover,
     &:focus {
@@ -232,20 +169,12 @@
   text-align: center;
   padding-block: 2em;
 
-
-
-
   &__title {
     text-transform: uppercase;
     margin-block-end: 1.035em;
-  
   }
 
   &__img {
-    margin-block-end: calc(var.$gutter-space*2);
-
-    @include mixin.medium-screen {
-      margin-block-end: calc(var.$gutter-space*8);
-    }
+    margin-block-end: calc(var.$gutter-space * 2);
   }
 }

@@ -1,0 +1,160 @@
+@use "../abstracts/mixin" as mixin;
+@use "../abstracts/variables" as var;
+
+@include mixin.small-screen {
+  .wrapper {
+    grid-template-areas: "header"
+      "main"
+      "footer";
+  }
+}
+
+@include mixin.medium-screen {
+
+  /* header styles*/
+  .header {
+    background-image: url("../images/desktop/image-header.jpg");
+    padding-block-start: 0;
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5%;
+    padding-block: 2em;
+  }
+
+  .brand {
+    margin-block-end: 0;
+
+    &__navtoggle {
+      display: none;
+    }
+  }
+
+  .nav {
+    display: block;
+    transform: translateX(0);
+    position: static;
+    background-color: inherit;
+    color: inherit;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .navlist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 0;
+
+    &__item {
+      &:last-child a {
+        background-color: var.$clr-white;
+        color: var.$clr-verydarkdesaturated-blue;
+
+        &:hover {
+          background-color: transparentize($color: var.$clr-white, $amount: 0.6);
+          color: var.$clr-white;
+          opacity: 1;
+        }
+      }
+
+    }
+
+    &__item+&__item {
+      margin-block-start: 0;
+      margin-inline-start: var.$block-space;
+    }
+
+    &__link {
+
+      color: var.$clr-white;
+    }
+  }
+
+  .hero {
+    &__img {
+      margin-block-end: calc(var.$gutter-space*8);
+    }
+  }
+
+  /* header media queries end */
+
+  /* main media queries start */
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: " transform transform"
+      "stand-out stand-out"
+      "graphics photography";
+
+    &-item {
+      flex-direction: row;
+
+      &>* {
+        flex-basis: 100%;
+      }
+
+      &__graphic-design {
+        grid-area: graphics;
+      }
+
+      &__photography {
+        grid-area: photography;
+      }
+
+      &__stand-out {
+        grid-area: stand-out;
+      }
+
+      &__transform {
+        grid-area: transform;
+        flex-direction: row-reverse;
+
+      }
+    }
+
+    &__img-mobile {
+
+      display: none;
+
+    }
+
+    &__img-desktop {
+
+      display: block;
+
+    }
+
+  }
+
+  .testimonial {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "title title title"
+      "testimonial testimonial testimonial";
+
+    &-samples {
+      display: flex;
+    }
+
+    &-samples__sample+&-samples__sample {
+      margin-block-start: 0;
+      margin-inline-start: calc(var.$gutter-space);
+    }
+
+  }
+
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* main media queries end */
+  .footer .navlist {
+    flex-direction: row;
+
+  }
+}

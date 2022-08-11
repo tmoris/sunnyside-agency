@@ -9,18 +9,17 @@
   justify-content: center;
   align-items: center;
   padding-block: calc(var.$gutter-space*2);
+
   & img {
     margin-block-end: var.$block-space;
   }
 }
+
 .footer .navlist {
   display: flex;
   flex-direction: column;
   gap: var.$block-space;
 
-  @include mixin.medium-screen {
-    flex-direction: row;
-  }
 }
 
 .navlist-link {
@@ -30,6 +29,7 @@
   transition: 250ms cubic-bezier(0.47, 0, 0.745, 0.715);
   text-decoration: none;
   padding: 0.25em 0.75em;
+
   &:hover {
     color: var.$clr-white;
   }
@@ -37,14 +37,15 @@
 
 .footer .footer-list__secondary {
   margin-block: calc(var.$gutter-space*2);
-flex-direction: row;
+  flex-direction: row;
 }
 
 .footer-list__secondary .navlist-link {
   padding: 0;
   color: inherit;
-  
+
 }
+
 .attribution a {
   color: var.$clr-yellow;
 }
