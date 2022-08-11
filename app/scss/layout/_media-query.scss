@@ -101,6 +101,10 @@
         flex-basis: 100%;
       }
 
+      &__text {
+        padding: 0;
+      }
+  
       &__graphic-design {
         grid-area: graphics;
       }

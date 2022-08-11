@@ -666,6 +666,9 @@ small,
   .services-item > * {
     flex-basis: 100%;
   }
+  .services-item__text {
+    padding: 0;
+  }
   .services-item__graphic-design {
     grid-area: graphics;
   }
