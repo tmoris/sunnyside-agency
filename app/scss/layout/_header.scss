@@ -168,9 +168,19 @@
       padding: 0.35em 1em;
       color: var.$clr-verydarkdesaturated-blue;
       text-transform: uppercase;
+      &:hover {
+        background-color: transparentize($color: var.$clr-yellow, $amount: 0.6);
+        color: var.$clr-white;
+        opacity: 1;
+      }
       @include mixin.medium-screen {
         background-color: var.$clr-white;
         color: var.$clr-verydarkdesaturated-blue;
+        &:hover {
+          background-color: transparentize($color: var.$clr-white, $amount: 0.6);
+          color: var.$clr-white;
+          opacity: 1;
+        }
       }
     }
    

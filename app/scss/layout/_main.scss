@@ -105,7 +105,19 @@
         &-standout::after {
           background-color: transparentize($color: var.$clr-softred, $amount: 0.7);
         } 
+        &-transform {
+          &:hover::after {
+            background-color: var.$clr-yellow;
+          } 
+        }
+        &-standout {
+          &:hover::after {
+            background-color: var.$clr-softred;
+          } 
+        }
+        
       } 
+
     }
   }
 }

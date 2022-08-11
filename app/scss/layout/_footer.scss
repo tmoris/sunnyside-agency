@@ -25,11 +25,14 @@
 
 .navlist-link {
   text-transform: capitalize;
-  color: var.$clr-verydarkgrayish-blue;
+  color: var.$clr-verydarkdesaturated-blue;
   cursor: pointer;
   transition: 250ms cubic-bezier(0.47, 0, 0.745, 0.715);
   text-decoration: none;
   padding: 0.25em 0.75em;
+  &:hover {
+    color: var.$clr-white;
+  }
 }
 
 .footer .footer-list__secondary {
@@ -40,6 +43,7 @@ flex-direction: row;
 .footer-list__secondary .navlist-link {
   padding: 0;
   color: inherit;
+  
 }
 .attribution a {
   color: var.$clr-yellow;

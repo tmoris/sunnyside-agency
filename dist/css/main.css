@@ -429,10 +429,20 @@ small,
   color: hsl(212deg, 27%, 19%);
   text-transform: uppercase;
 }
+.navlist__item:last-child a:hover {
+  background-color: rgba(250, 212, 0, 0.4);
+  color: hsl(0deg, 0%, 100%);
+  opacity: 1;
+}
 @media (min-width: 45.75em) {
   .navlist__item:last-child a {
     background-color: hsl(0deg, 0%, 100%);
     color: hsl(212deg, 27%, 19%);
+  }
+  .navlist__item:last-child a:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: hsl(0deg, 0%, 100%);
+    opacity: 1;
   }
 }
 .navlist__item + .navlist__item {
@@ -586,6 +596,12 @@ small,
 .services-item__text--link-standout::after {
   background-color: rgba(254, 120, 103, 0.3);
 }
+.services-item__text--link-transform:hover::after {
+  background-color: hsl(51deg, 100%, 49%);
+}
+.services-item__text--link-standout:hover::after {
+  background-color: hsl(7deg, 99%, 70%);
+}
 
 .services-item__graphic-design,
 .services-item__photography {
@@ -696,11 +712,14 @@ small,
 
 .navlist-link {
   text-transform: capitalize;
-  color: hsl(213deg, 9%, 39%);
+  color: hsl(212deg, 27%, 19%);
   cursor: pointer;
   transition: 250ms cubic-bezier(0.47, 0, 0.745, 0.715);
   text-decoration: none;
   padding: 0.25em 0.75em;
+}
+.navlist-link:hover {
+  color: hsl(0deg, 0%, 100%);
 }
 
 .footer .footer-list__secondary {
