@@ -153,7 +153,6 @@
 }
 
 .navlist {
-  margin-block-end: var.$block-space;
   padding-block: 2em;
 
   @include mixin.medium-screen {
@@ -161,6 +160,22 @@
     justify-content: center;
     align-items: center;
     padding-block: 0;
+  }
+  &__item {
+    &:last-child a {
+      background-color: var.$clr-yellow;
+      border-radius: 100vw;
+      padding: 0.25em 1em;
+      color: var.$clr-verydarkdesaturated-blue;
+      text-transform: uppercase;
+
+      @include mixin.medium-screen {
+        background-color: var.$clr-white;
+        color: var.$clr-verydarkdesaturated-blue;
+        text-transform:capitalize ;
+      }
+    }
+   
   }
 
   &__item+&__item {
@@ -170,6 +185,7 @@
       margin-block-start: 0;
       margin-inline-start: var.$block-space;
     }
+    
   }
 
   &__link {
@@ -179,6 +195,8 @@
     transition: 250ms cubic-bezier(0.47, 0, 0.745, 0.715);
     text-decoration: none;
     padding: 0.25em 0.75em;
+
+    
 
     @include mixin.medium-screen {
       color: var.$clr-white;

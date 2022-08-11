@@ -412,8 +412,6 @@ small,
 }
 
 .navlist {
-  -webkit-margin-after: 1rem;
-          margin-block-end: 1rem;
   padding-block: 2em;
 }
 @media (min-width: 45.75em) {
@@ -422,6 +420,20 @@ small,
     justify-content: center;
     align-items: center;
     padding-block: 0;
+  }
+}
+.navlist__item:last-child a {
+  background-color: hsl(51deg, 100%, 49%);
+  border-radius: 100vw;
+  padding: 0.25em 1em;
+  color: hsl(212deg, 27%, 19%);
+  text-transform: uppercase;
+}
+@media (min-width: 45.75em) {
+  .navlist__item:last-child a {
+    background-color: hsl(0deg, 0%, 100%);
+    color: hsl(212deg, 27%, 19%);
+    text-transform: capitalize;
   }
 }
 .navlist__item + .navlist__item {
