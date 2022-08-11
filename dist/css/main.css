@@ -556,8 +556,7 @@ small,
   flex-direction: column;
   align-items: center;
   text-align: center;
-  -webkit-padding-before: 1rem;
-          padding-block-start: 1rem;
+  padding-block: 1.125rem;
 }
 .services-item__text--title {
   font-size: 2em;
