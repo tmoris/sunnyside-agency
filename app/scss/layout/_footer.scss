@@ -9,8 +9,10 @@
   justify-content: center;
   align-items: center;
   padding-block: calc(var.$gutter-space*2);
+  & img {
+    margin-block-end: var.$block-space;
+  }
 }
-
 .footer .navlist {
   display: flex;
   flex-direction: column;
@@ -31,10 +33,14 @@
 }
 
 .footer .footer-list__secondary {
+  margin-block: calc(var.$gutter-space*2);
 flex-direction: row;
 }
 
 .footer-list__secondary .navlist-link {
   padding: 0;
   color: inherit;
+}
+.attribution a {
+  color: var.$clr-yellow;
 }

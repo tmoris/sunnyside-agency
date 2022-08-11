@@ -677,6 +677,10 @@ small,
   align-items: center;
   padding-block: 2.25rem;
 }
+.footer img {
+  -webkit-margin-after: 1rem;
+          margin-block-end: 1rem;
+}
 
 .footer .navlist {
   display: flex;
@@ -699,10 +703,15 @@ small,
 }
 
 .footer .footer-list__secondary {
+  margin-block: 2.25rem;
   flex-direction: row;
 }
 
 .footer-list__secondary .navlist-link {
   padding: 0;
   color: inherit;
+}
+
+.attribution a {
+  color: hsl(51deg, 100%, 49%);
 }/*# sourceMappingURL=main.css.map */
