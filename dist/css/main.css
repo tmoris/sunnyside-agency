@@ -604,7 +604,7 @@ small,
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem 1.125rem;
+  padding: 1.125rem;
   text-align: center;
   color: hsl(213deg, 9%, 39%);
 }
@@ -639,6 +639,8 @@ small,
   inline-size: 5rem;
   border-radius: 100vw;
   margin-inline: auto;
+  -webkit-margin-after: 1rem;
+          margin-block-end: 1rem;
 }
 .testimonial-title, .testimonial-subtitle {
   color: rgba(35, 48, 62, 0.4);
@@ -647,15 +649,15 @@ small,
   font-size: 1.5em;
   text-transform: uppercase;
   grid-area: title;
+  -webkit-margin-after: 1.035rem;
+          margin-block-end: 1.035rem;
 }
 .testimonial-subtitle {
-  margin: 0;
   text-transform: capitalize;
   font-size: 1rem;
 }
 .testimonial .name {
   font-size: 1.25rem;
-  margin: 0;
 }
 
 .gallery {

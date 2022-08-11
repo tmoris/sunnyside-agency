@@ -125,7 +125,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: var.$block-space var.$gutter-space;
+  padding: var.$gutter-space;
   text-align: center;
   color: var.$clr-verydarkgrayish-blue;
 
@@ -160,6 +160,7 @@
     inline-size: 5rem;
     border-radius: 100vw;
     margin-inline: auto;
+    margin-block-end: var.$block-space;
   }
 
   &-title,
@@ -171,17 +172,17 @@
     font-size: 1.5em;
     text-transform: uppercase;
     grid-area: title;
+    margin-block-end: 1.035rem;
+
   }
 
   &-subtitle {
-    margin: 0;
     text-transform: capitalize;
     font-size: 1rem;
   }
 
   & .name {
     font-size: 1.25rem;
-    margin: 0;
   }
 }
 
