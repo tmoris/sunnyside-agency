@@ -186,7 +186,7 @@
    
   }
 
-  &__item+&__item {
+  &__item + &__item {
     margin-block-start: var.$block-space;
 
     @include mixin.medium-screen {
@@ -212,7 +212,10 @@
 
     &:hover,
     &:focus {
-      opacity: 0.5;
+      opacity: 0.65;
+      color: var.$clr-verydarkdesaturated-blue;
+      border-block-end: 0.125em solid var.$clr-yellow;
+      border-radius: 100vw;
     }
   }
 }

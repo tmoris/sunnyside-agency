@@ -471,7 +471,11 @@ small,
   }
 }
 .navlist__link:hover, .navlist__link:focus {
-  opacity: 0.5;
+  opacity: 0.65;
+  color: hsl(212deg, 27%, 19%);
+  -webkit-border-after: 0.125em solid hsl(51deg, 100%, 49%);
+          border-block-end: 0.125em solid hsl(51deg, 100%, 49%);
+  border-radius: 100vw;
 }
 
 /*navigation styles end */
