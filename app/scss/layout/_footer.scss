@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-block: calc(var.$gutter-space*2);
+  padding: var.$gutter-space;
 
   & img {
     margin-block-end: var.$block-space;
