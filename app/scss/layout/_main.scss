@@ -30,7 +30,8 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      padding-block: var.$gutter-space;
+      padding: var.$gutter-space;
+      
 
       &--title {
         font-size: 2em;

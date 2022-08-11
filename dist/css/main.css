@@ -448,7 +448,7 @@ small,
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding-block: 1.125rem;
+  padding: 1.125rem;
 }
 .services-item__text--title {
   font-size: 2em;
@@ -593,6 +593,8 @@ small,
     grid-template-areas: "header" "main" "footer";
   }
 }
+/*mobile screen styles end */
+/* large screen styles start*/
 @media (min-width: 45.75em) {
   /* header styles*/
   .header {
@@ -701,6 +703,7 @@ small,
     grid-template-columns: repeat(4, 1fr);
   }
   /* main media queries end */
+  /* footer media queries start */
   .footer .navlist {
     flex-direction: row;
   }

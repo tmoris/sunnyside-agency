@@ -8,6 +8,9 @@
       "footer";
   }
 }
+/*mobile screen styles end */
+
+ /* large screen styles start*/
 
 @include mixin.medium-screen {
 
@@ -153,6 +156,8 @@
   }
 
   /* main media queries end */
+
+   /* footer media queries start */
   .footer .navlist {
     flex-direction: row;
 
