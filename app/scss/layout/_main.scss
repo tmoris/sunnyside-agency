@@ -48,6 +48,7 @@
       &__transform {
         grid-area: transform;
         flex-direction: row-reverse;
+        
       }
     }
 
@@ -83,7 +84,26 @@
         text-transform: uppercase;
         font-family: var.$heading-font-fraunces;
         color: inherit;
-      }
+        position: relative;
+        z-index: 1;
+
+        &-transform::after, &-standout::after {
+          content: '';
+          width: 8em;
+          height: 0.45em;
+          position: absolute;
+          left: -0.5em;
+          bottom: 0;
+          z-index: -1;
+          border-radius: 100vw;
+        }
+        &-transform::after {
+          background-color: transparentize($color: var.$clr-yellow, $amount: 0.7);
+        }
+        &-standout::after {
+          background-color: transparentize($color: var.$clr-softred, $amount: 0.7);
+        } 
+      } 
     }
   }
 }

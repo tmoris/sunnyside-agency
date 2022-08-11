@@ -165,14 +165,12 @@
     &:last-child a {
       background-color: var.$clr-yellow;
       border-radius: 100vw;
-      padding: 0.25em 1em;
+      padding: 0.35em 1em;
       color: var.$clr-verydarkdesaturated-blue;
       text-transform: uppercase;
-
       @include mixin.medium-screen {
         background-color: var.$clr-white;
         color: var.$clr-verydarkdesaturated-blue;
-        text-transform:capitalize ;
       }
     }
    

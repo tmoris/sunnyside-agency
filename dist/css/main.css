@@ -425,7 +425,7 @@ small,
 .navlist__item:last-child a {
   background-color: hsl(51deg, 100%, 49%);
   border-radius: 100vw;
-  padding: 0.25em 1em;
+  padding: 0.35em 1em;
   color: hsl(212deg, 27%, 19%);
   text-transform: uppercase;
 }
@@ -433,7 +433,6 @@ small,
   .navlist__item:last-child a {
     background-color: hsl(0deg, 0%, 100%);
     color: hsl(212deg, 27%, 19%);
-    text-transform: capitalize;
   }
 }
 .navlist__item + .navlist__item {
@@ -573,6 +572,24 @@ small,
   text-transform: uppercase;
   font-family: "Fraunces", serif;
   color: inherit;
+  position: relative;
+  z-index: 1;
+}
+.services-item__text--link-transform::after, .services-item__text--link-standout::after {
+  content: "";
+  width: 8em;
+  height: 0.45em;
+  position: absolute;
+  left: -0.5em;
+  bottom: 0;
+  z-index: -1;
+  border-radius: 100vw;
+}
+.services-item__text--link-transform::after {
+  background-color: rgba(250, 212, 0, 0.3);
+}
+.services-item__text--link-standout::after {
+  background-color: rgba(254, 120, 103, 0.3);
 }
 
 .services-item__graphic-design,
