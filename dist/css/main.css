@@ -482,8 +482,8 @@ small,
           margin-block-end: 1.035em;
 }
 .hero__img {
-  -webkit-margin-after: 1rem;
-          margin-block-end: 1rem;
+  -webkit-margin-after: 2.25rem;
+          margin-block-end: 2.25rem;
 }
 @media (min-width: 45.75em) {
   .hero__img {
@@ -555,7 +555,9 @@ small,
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: start;
+  text-align: center;
+  -webkit-padding-before: 1rem;
+          padding-block-start: 1rem;
 }
 .services-item__text--title {
   font-size: 2em;
@@ -575,7 +577,7 @@ small,
   height: 0.45em;
   position: absolute;
   left: -0.5em;
-  bottom: 0;
+  bottom: 0.2em;
   z-index: -1;
   border-radius: 100vw;
 }

@@ -229,8 +229,8 @@
   }
 
   &__img {
-    margin-block-end: var.$block-space;
-    
+    margin-block-end: calc(var.$gutter-space*2);
+
     @include mixin.medium-screen {
       margin-block-end: calc(var.$gutter-space*8);
     }

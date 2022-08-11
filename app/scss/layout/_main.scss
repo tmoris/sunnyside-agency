@@ -72,7 +72,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      text-align: start;
+      text-align: center;
+      padding-block-start: var.$block-space;
 
       &--title {
         font-size: 2em;
@@ -94,7 +95,7 @@
           height: 0.45em;
           position: absolute;
           left: -0.5em;
-          bottom: 0;
+          bottom: 0.2em;
           z-index: -1;
           border-radius: 100vw;
         }
